@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cris Garota da Sorte 22200 I Vereadora São Caetano do Sul</title>
+    <style>
+        ::-webkit-scrollbar-thumb {
+            background: #015a38;
+            border-radius: 50px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #015a38;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffffff;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .banner {
+            background: url('campanha-eleitoral.jpg') no-repeat center center/cover;
+            height: 900px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .navbar {
+    background-color: #015a38;
+    overflow: hidden;
+    position: sticky;
+    justify-content: space-around;
+    display: flex;
+    top: 0;
+    box-shadow: 0px 0px 10px #000;
+    z-index: 1000;
+}
+        .navbar img {
+            margin-left: 50px;
+            margin-top: 20px;
+            height: 50px;
+        }
+        .navbar .ancoras {
+            justify-content: center;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 30px 20px 20px 20px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .navbar a:hover {
+            background-color: #089b34ad;
+            color: rgb(255, 255, 255);
+            transition: 0.2s;
+        }
+        .capa {
+            background: url('capa.jpg') no-repeat center center/cover;
+        }
+        section {
+            padding: 60px 20px;
+        }
+        #sobre {
+            background-color: #f4f4f4;
+        }
+        #propostas {
+            background-color: #f4f4f4;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        #propostas h2 {
+            font-weight: 900;
+            font-size: 45px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #068856;
+        }
+        #propostas p {
+            color: #0006;
+        }
+        /* Estilizando o contêiner de vídeo */
+.video-container {
+    position: relative;
+    width: 23%;
+}
+
+.video-overlay {
+    position: relative;
+    cursor: pointer;
+}
+
+.video-overlay video {
+    width: 100%;
+}
+
+/* Estilo para o ícone de play */
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Para não interferir no clique no vídeo */
+}
+
+/* Fundo preto leve ao passar o mouse */
+.video-overlay:hover video {
+    filter: brightness(50%); /* Escurece o vídeo levemente */
+}
+/* Parallax Container */
+.parallax-container {
+    position: relative;
+    height: 600px; /* Ajuste conforme necessário */
+    background-image: url('para.png'); /* Defina a imagem de fundo */
+    background-attachment: fixed; /* Efeito Parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+
+
+/* Conteúdo abaixo da seção parallax */
+section {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.video-overlay:hover .play-icon {
+    opacity: 1;
+}
+
+        .video-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .video-container {
+            position: relative;
+            width: 23%;
+        }
+        .video-container video {
+            width: 100%;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+}
+        .modal-content video {
+            width:60%;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        #contato {
+            background-color: #f4f4f4;
+        }
+        footer {
+            background-color: #015a38;
+            color: white;
+            display: grid;
+            text-align: center;
+            justify-content: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        footer p {
+            margin: 0;
+        }
+        footer hr{
+            width: 100%;
+        }
+        /* Estilos para a div que contém a imagem e o texto */
+.image-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f400;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Estilos da imagem */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    width: 700px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+.text-container {
+    width: 400px;
+    margin-left: 20px;
+}
+
+.text-container h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #015a38;
+}
+.text-container p {
+    font-size: 20px;
+    color: #817b7b;
+    margin-top: 23px;
+    line-height: 30px;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div><img src="cris.png" alt=""></div>
+        <div class="ancoras">
+            <a href="#sobre">Sobre</a>
+            <a href="#propostas">Propostas</a>
+            <a href="#contato">Contato</a>
+        </div>
+        <div class="ancoras">
+            <a href="#https://www.instagram.com/garotadasortepl/"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/thalia.c.alves/"><i class="bi bi-facebook"></i></a>
+        </div>
+    </div>
+
+    <div class="banner"></div>
+
+    <div class="capa"></div>
+
+    <div class="image-text-container" id="sobre">
+        <div class="image-container">
+            <img src="sorte.png" alt="Descrição da Imagem">
+        </div>
+        <div class="text-container">
+            <h2>POR QUE "GAROTA DA SORTE"?</h2>
+            <p>"Desde que comecei a trabalhar com venda de jogos de lotérica nas ruas, os clientes me reconheciam e comentavam "Lá vem a garota da sorte!". <br><br>Então garota da sorte foi um nome que os clientes deram para mim! Tenho muito orgulho da minha trajetória e reconhecimento que recebi ao longo dos meus anos de trabalho    "</p>
+        </div>
+    </div>
+
+    <section id="propostas">
+        <h2>Propostas de Governo</h2>
+        <div class="video-grid">
+            <div class="video-container">
+                <div class="video-overlay">
+                    <video id="video1" src="cris (1).mp4" onclick="openModal(this)"></video>
+                    <div class="play-icon">&#9658;</div> <!-- Ícone de Play -->
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-overlay">
+                    <video id="video2" src="cris (2).mp4" onclick="openModal(this)"></video>
+                    <div class="play-icon">&#9658;</div>
+                   
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-overlay">
+                    <video id="video3" src="cris (3).mp4" onclick="openModal(this)"></video>
+                    <div class="play-icon">&#9658;</div>
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-overlay">
+                    <video id="video4" src="cris (4).mp4" onclick="openModal(this)"></video>
+                    <div class="play-icon">&#9658;</div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <div class="parallax-container">
+       
+    </div>
+
+    
+
+
+    <footer>
+        <p>&copy; 2024 Campanha Eleitoral - Cris Garota da Sorte I CNPJ do Candidato:56.336.830/0001-49. Todos os direitos reservados.</p>
+        <br>
+        <hr>
+    </footer>
+
+    <!-- Modal de Vídeo -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <video id="modalVideo" controls></video>
+        </div>
+    </div>
+
+    <script>
+        function openModal(video) {
+            var modal = document.getElementById('modal');
+            var modalVideo = document.getElementById('modalVideo');
+            modalVideo.src = video.src;
+            modalVideo.volume = 1.0;
+            modal.style.display = "flex";
+            modalVideo.play();
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('modal');
+            var modalVideo = document.getElementById('modalVideo');
+            modal.style.display = "none";
+            modalVideo.pause();
+            modalVideo.src = "";
+        }
+    </script>
+</body>
+</html>
