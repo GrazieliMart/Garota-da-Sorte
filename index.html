@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cris Garota da Sorte 22200 I Vereadora São Caetano do Sul</title>
     <style>
+         html {
+            scroll-behavior: smooth;
+        }
+
         ::-webkit-scrollbar-thumb {
             background: #015a38;
             border-radius: 50px;
@@ -59,14 +63,14 @@
             justify-content: center;
         }
         .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 30px 20px 20px 20px;
-            text-decoration: none;
-            transition: 0.2s;
-        }
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 20px 20px 20px;
+    text-decoration: none;
+    transition: 0.2s;
+}
         .navbar a:hover {
             background-color: #089b34ad;
             color: rgb(255, 255, 255);
@@ -242,7 +246,18 @@ section {
     width: 400px;
     margin-left: 20px;
 }
-
+.titulo h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #015a38;
+}
+.titulo{
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+text-align: center;
+}
 .text-container h2 {
     font-size: 2rem;
     font-weight: 900;
@@ -258,8 +273,11 @@ section {
     .video-grid {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap:5px;
     flex-wrap: wrap;
+}
+.navbar a{
+    padding: 10px 20px 10px 10px;
 }
 #propostas h2 {
     font-weight: 900;
@@ -299,6 +317,29 @@ section {
     margin-left: 2px;
 }
 }
+.photo-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .photo-grid .photo {
+            flex: 1;
+        }
+
+        /* Responsivo para dispositivos móveis */
+        @media (max-width: 768px) {
+            .photo-grid {
+                flex-wrap: wrap;
+            }
+            .photo-grid .photo {
+                flex: 0 0 48%; /* Largura de 48% para criar duas colunas */
+            }
+        }
     </style>
 </head>
 <body>
@@ -307,7 +348,7 @@ section {
         <div class="ancoras">
             <a href="#sobre">Sobre</a>
             <a href="#propostas">Propostas</a>
-            <a href="#contato">Contato</a>
+           
         </div>
         <div class="ancoras">
             <a href="#https://www.instagram.com/garotadasortepl/"><i class="bi bi-instagram"></i></a>
@@ -365,9 +406,25 @@ section {
        
     </div>
 
-    
-
-
+     <div class="titulo">
+        <h2>VISITE MEU INSTAGRAM</h2></div>
+    <div class="photo-grid">
+       
+        <div class="photo">
+            <img src="insta (1).jpg" alt="Foto 1">
+        </div>
+        <div class="photo">
+            <img src="insta (2).jpg" alt="Foto 2">
+        </div>
+        <div class="photo">
+            <img src="insta (3).jpg" alt="Foto 3">
+        </div>
+        <div class="photo">
+            <img src="insta (4).jpg" alt="Foto 4">
+        </div>
+    </div>
+    <div class="titulo">
+       <a href=""><button>VISITAR</button></a></div>
     <footer>
         <p>&copy; 2024 Campanha Eleitoral - Cris Garota da Sorte I CNPJ do Candidato:56.336.830/0001-49. Todos os direitos reservados.</p>
         <br>
@@ -400,5 +457,34 @@ section {
             modalVideo.src = "";
         }
     </script>
+    <script>
+        // Função para verificar se um elemento está visível na janela de visualização
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    
+        // Função para adicionar a classe "animated" quando o elemento estiver visível
+        function animateOnScroll() {
+            const imageContainer = document.querySelector('#sobre .image-container');
+            const textContainer = document.querySelector('#sobre .text-container');
+            
+            if (isElementInViewport(imageContainer)) {
+                imageContainer.classList.add('animated');
+            }
+            if (isElementInViewport(textContainer)) {
+                textContainer.classList.add('animated');
+            }
+        }
+    
+        // Escutar o evento de scroll e aplicar a animação
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+    
 </body>
 </html>
