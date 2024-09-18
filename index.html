@@ -258,6 +258,20 @@ section {
     justify-content: center;
 text-align: center;
 }
+.titulo button {
+    background-color: #068856;
+    padding: 20px;
+    width: 200px;
+    font-size: 20px;
+    color: #fff;
+    border: navajowhite;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+.titulo button:hover{
+    transition: 0.2s;
+    transform: scale(1.1);
+}
 .text-container h2 {
     font-size: 2rem;
     font-weight: 900;
@@ -334,11 +348,32 @@ text-align: center;
         /* Responsivo para dispositivos móveis */
         @media (max-width: 768px) {
             .photo-grid {
-                flex-wrap: wrap;
-            }
+        justify-content: center;
+        flex-wrap: wrap;
+    }
             .photo-grid .photo {
                 flex: 0 0 48%; /* Largura de 48% para criar duas colunas */
             }
+            .titulo h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #015a38;
+}
+.photo-grid img {
+        width: 120%;
+        margin-left: -20px;
+        height: auto;
+        border-radius: 10px;
+    }
+.photo-grid .photo {
+        flex: 0 0 48%;
+        justify-content: center;
+        display: flex;
+    }
+    footer p {
+    margin: 20px;
+}
         }
     </style>
 </head>
@@ -411,20 +446,20 @@ text-align: center;
     <div class="photo-grid">
        
         <div class="photo">
-            <img src="insta (1).jpg" alt="Foto 1">
+            <a href="https://www.instagram.com/p/C-vJv8oJWdl/"><img src="insta (1).jpg" alt="Foto 1"></a>
         </div>
         <div class="photo">
-            <img src="insta (2).jpg" alt="Foto 2">
+           <a href="https://www.instagram.com/p/C_xwUe-Jm6h/"> <img src="insta (2).jpg" alt="Foto 2"></a>
         </div>
         <div class="photo">
-            <img src="insta (3).jpg" alt="Foto 3">
+            <a href="https://www.instagram.com/p/C_3imQ6PlWq/"><img src="insta (3).jpg" alt="Foto 3"></a>
         </div>
         <div class="photo">
-            <img src="insta (4).jpg" alt="Foto 4">
+           <a href="https://www.instagram.com/p/C-27YYjJ03n/"> <img src="insta (4).jpg" alt="Foto 4"></a>
         </div>
     </div>
     <div class="titulo">
-       <a href=""><button>VISITAR</button></a></div>
+       <a href="https://www.instagram.com/garotadasortepl/"><button>VISITAR</button></a></div>
     <footer>
         <p>&copy; 2024 Campanha Eleitoral - Cris Garota da Sorte I CNPJ do Candidato:56.336.830/0001-49. Todos os direitos reservados.</p>
         <br>
